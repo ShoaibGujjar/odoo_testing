@@ -1,3 +1,15 @@
-User Story 1: I want to create a new customer record in Odoo so that I can manage their information effectively.
-User Story 2: I want to search for a specific product in Odoo so that I can add it to a sales order.
-User Story 3: I want to track inventory levels in Odoo so that I can order products before they run out.
+# User Story 1: I want to create a new customer record in Odoo so that I can manage their information effectively.
+
+    Equivalence Class: Valid information, Missing Information, Invalid Information
+    Boundary Value: minimum and maximum value limit for each field
+
+# User Story 2: I want to search for a specific product in Odoo so that I can add it to a sales order.
+
+    Equivalence Class: Valid Information, Partial Information, Invalid Information
+    Boundary Value: Minimum and Maximum limit of characters that can be entered in the search bar
+# User Story 3: I want to track inventory levels in Odoo so that I can order products before they run out.
+
+    Equivalence Class: Current Inventory Level, Initial Inventory Level, Reorder Point
+    Boundary Value: Minimum and Maximum value of Current Inventory Level and Reorder Point
+
+
