@@ -1,4 +1,4 @@
-User Story 1:create a new customer
+**User Story 1: create a new customer**
 
 Scenarios:Creating new customer
     Given a new customer record is created
@@ -15,3 +15,20 @@ Scenarios:Creating new customer
     Given a new customer record is created
     When the sales representative enters invalid information in a field
     Then the system should provide an error message and prevent the user from saving the record
+
+**User Story 2: search for a specific product**
+
+Scenarios:search specific product
+    Given the product catalog is open
+    When the sales representative enters the exact name or code of a product in the search bar
+    Then the system should display the product information
+
+Scenarios:search specific product
+    Given the product catalog is open
+    When the sales representative enters partial information in the search bar
+    Then the system should display a list of products that match the search criteria
+
+Scenarios:search specific product  
+    Given the product catalog is open
+    When the sales representative enters an invalid product name or code in the search bar
+    Then the system should display an error message and prompt the user to enter valid information
