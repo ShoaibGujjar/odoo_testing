@@ -1,0 +1,55 @@
+**User Story 1: create a new customer**
+
+Scenarios:Creating new customer
+    Given a new customer record is created
+    When the sales representative enters valid information in all required fields
+    Then the system should save the record successfully
+    And redirect home page 
+
+Scenarios:Creating new customer
+    Given a new customer record is created
+    When the sales representative leaves a required field blank
+    Then the system should prompt the user to fill in the missing information
+
+Scenarios:Creating new customer
+    Given a new customer record is created
+    When the sales representative enters invalid information in a field
+    Then the system should provide an error message 
+    And prevent the user from saving the record
+
+
+**User Story 2: search for a specific product**
+
+Scenarios:search specific product
+    Given the product catalog is open
+    When the sales representative enters the exact name or code of a product in the search bar
+    Then the system should display the product information
+
+Scenarios:search specific product
+    Given the product catalog is open
+    When the sales representative enters partial information in the search bar
+    Then the system should display a list of products that match the search criteria
+
+Scenarios:search specific product  
+    Given the product catalog is open
+    When the sales representative enters an invalid product name or code in the search bar
+    Then the system should display an error message 
+    And prompt the user to enter valid information
+
+
+**User Story 3: Want to track inventory levels**
+
+Scenarios: Track inventory
+    Given the inventory dashboard is open
+    When the warehouse manager selects a product from the list
+    Then the system should display the current inventory level.
+
+Scenarios: Track inventory
+    Given the inventory dashboard is open
+    When the warehouse manager creates a new product record
+    Then the system should set the initial inventory level to zero.
+
+Scenarios: Track inventory
+    Given the inventory dashboard is open
+    When the warehouse manager sets a reorder point for a product
+    Then the system should generate a notification when the inventory level falls below that point
