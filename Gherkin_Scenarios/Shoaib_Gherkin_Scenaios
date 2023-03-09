@@ -14,7 +14,9 @@ Scenarios:Creating new customer
 Scenarios:Creating new customer
     Given a new customer record is created
     When the sales representative enters invalid information in a field
-    Then the system should provide an error message and prevent the user from saving the record
+    Then the system should provide an error message 
+    And prevent the user from saving the record
+
 
 **User Story 2: search for a specific product**
 
@@ -31,4 +33,23 @@ Scenarios:search specific product
 Scenarios:search specific product  
     Given the product catalog is open
     When the sales representative enters an invalid product name or code in the search bar
-    Then the system should display an error message and prompt the user to enter valid information
+    Then the system should display an error message 
+    And prompt the user to enter valid information
+
+
+**User Story 3: Want to track inventory levels**
+
+Scenarios: Track inventory
+    Given the inventory dashboard is open
+    When the warehouse manager selects a product from the list
+    Then the system should display the current inventory level.
+
+Scenarios: Track inventory
+    Given the inventory dashboard is open
+    When the warehouse manager creates a new product record
+    Then the system should set the initial inventory level to zero.
+
+Scenarios: Track inventory
+    Given the inventory dashboard is open
+    When the warehouse manager sets a reorder point for a product
+    Then the system should generate a notification when the inventory level falls below that point
