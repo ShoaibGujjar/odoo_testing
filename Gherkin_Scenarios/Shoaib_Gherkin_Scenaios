@@ -1,0 +1,17 @@
+User Story 1:create a new customer
+
+Scenarios:Creating new customer
+    Given a new customer record is created
+    When the sales representative enters valid information in all required fields
+    Then the system should save the record successfully
+    And redirect home page 
+
+Scenarios:Creating new customer
+    Given a new customer record is created
+    When the sales representative leaves a required field blank
+    Then the system should prompt the user to fill in the missing information
+
+Scenarios:Creating new customer
+    Given a new customer record is created
+    When the sales representative enters invalid information in a field
+    Then the system should provide an error message and prevent the user from saving the record
