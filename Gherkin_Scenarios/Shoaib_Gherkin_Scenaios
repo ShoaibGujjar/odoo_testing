@@ -1,4 +1,4 @@
-**User Story 1: create a new customer**
+**User Story 1: create a new customer and manage their information**
 
 Scenarios:Creating new customer
     Given a new customer record is created
@@ -16,6 +16,11 @@ Scenarios:Creating new customer
     When the sales representative enters invalid information in a field
     Then the system should provide an error message 
     And prevent the user from saving the record
+
+Scenarios:Create new invoice
+    Given the invoices list is open
+    When the finance manager creates a new invoice
+    Then the system should prompt the user to enter all required information, including the customer name, due date, and amount
 
 
 **User Story 2: search for a specific product**
@@ -36,6 +41,11 @@ Scenarios:search specific product
     Then the system should display an error message 
     And prompt the user to enter valid information
 
+Scenarios:search specific product by category
+    Given a product catalog is open
+    When the sales representative filters the product list by category
+    Then the system should display only products that belong to that category
+
 
 **User Story 3: Want to track inventory levels**
 
@@ -52,4 +62,11 @@ Scenarios: Track inventory
 Scenarios: Track inventory
     Given the inventory dashboard is open
     When the warehouse manager sets a reorder point for a product
-    Then the system should generate a notification when the inventory level falls below that point
+    Then the system should generate a notification 
+    When the inventory level falls below that point
+
+Scenarios: Upadation of inventory
+    Given the inventory dashboard is open
+    When the warehouse manager adds new inventory to a product
+    Then the system should update the current inventory level 
+    And display the new level
