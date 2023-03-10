@@ -1,0 +1,56 @@
+User Story 01:	As a project manager, I want to easily view the status of my team's tasks in Odoo so that I can track progress and make necessary 					adjustments.
+
+Gherkin Scenarios:
+
+Given the task list is open, 
+when the project manager selects a task, 
+then the system should display the current status and progress.
+
+Given the task list is open, 
+when the project manager assigns a new task to a team member, 
+then the system should update the task list accordingly.
+
+Given the task list is open, 
+when the project manager changes the due date of a task,
+then the system should adjust the status and progress accordingly.
+
+
+User Story 02:	As an HR manager, I want to easily manage employee information in Odoo so that I can maintain accurate records.
+
+Gherkin Scenarios:
+
+Given the employee list is open, 
+when the HR manager selects an employee, 
+then the system should display their personal and professional information.
+
+Given the employee list is open, 
+when the HR manager creates a new employee record, 
+then the system should prompt the user to enter all required information.
+
+Given the employee list is open, 
+when the HR manager updates an employee,
+then system should display the updates review page before updating the employee.
+
+User Story 03:	As a finance manager, I want to easily manage invoices and payments in Odoo so that I can ensure timely and accurate processing of 					financial transactions.
+
+Gherkin Scenarios:
+
+Given the invoices list is open, 
+when the finance manager selects an invoice, 
+then the system should display the details of the invoice, including the due date, amount, and payment status.
+
+Given the invoices list is open, 
+when the finance manager creates a new invoice, 
+then the system should prompt the user to enter all required information, including the customer name, due date, and amount.
+
+Given the invoices list is open, 
+when the finance manager applies a payment to an invoice, 
+then the system should update the payment status of the invoice and record the payment information.
+
+Given the payments list is open, 
+when the finance manager selects a payment, 
+then the system should display the details of the payment, including the amount, date, and invoice number.
+
+Given the payments list is open, 
+when the finance manager creates a new payment, 
+then the system should prompt the user to enter all required information, including the amount, date, and invoice number.

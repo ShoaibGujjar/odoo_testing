@@ -1,0 +1,14 @@
+User Story 01:	As a project manager, I want to easily view the status of my team's tasks in Odoo so that I can track progress and make necessary 					adjustments.
+
+	Equivalence Class: Current Status, Progress, Due Date
+	Boundary Value: Minimum and Maximum value of Progress
+
+User Story 02:	As an HR manager, I want to easily manage employee information in Odoo so that I can maintain accurate records.
+	
+	Equivalence Class: Valid employee information, Invalid employee information, Valid and invalid actions for managing employee information, Valid and 					 invalid search criteria
+	Boundary Value: Maximum number of employees that can be managed by Odoo, Minimum required fields to add a new employee, Maximum field length for employee 			    data, Maximum number of users who can access the system simultaneously
+
+User Story 03:	As a finance manager, I want to easily manage invoices and payments in Odoo so that I can ensure timely and accurate processing of 					financial transactions.
+	
+	Equivalence Class: Invoice Due Date, Invoice Amount, Payment Amount, Payment Date
+	Boundary Value: Minimum and Maximum value of Invoice Amount and Payment Amount
