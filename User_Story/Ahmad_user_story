@@ -1,15 +1,15 @@
-I want to add an ecommerce facility so that user I sell my product online
+I want to activate the ecommerce facility so that user can sell their product online
 Equivalence Class: Valid Information, Missing Information, Invalid Information
 Boundary Value: minimum and maximum value limit for each field
 
 
 
-I want to add an attendence facility so that I can track employee attendence
+I want to upgrade accounting so that user can easily manage their budgets
 Equivalence Class: Valid Information, Missing Information, Invalid Information
 Boundary Value: minimum and maximum value limit for each field
 
 
 
-I want to add an appointment facility so that I can appoint the meeting online
+I want to see all the services currently running so that user can choose any service
 Equivalence Class: Valid Information, Missing Information, Invalid Information
 Boundary Value: minimum and maximum value limit for each field
