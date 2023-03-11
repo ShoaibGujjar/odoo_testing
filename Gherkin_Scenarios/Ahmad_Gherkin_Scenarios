@@ -1,1 +1,19 @@
-
+   Scenario   *****   activate the ecommerce facility    *****
+   Given      the user is on the home page
+   When       the user click on activate the ecommerce facility
+   Then       the ecommerce facility should be activated
+   
+   
+   
+   
+   Scenario   *****   upgrade accounting   ******
+   Given      the user is on homepage
+   When       the user click on upgrade accounting
+   Then       the accounting facility should be activated
+   
+   
+   
+   Scenario   *****    all the services currently running    ******
+   Given      the user is on the homepage
+   When       the user click on all the services currently running
+   Then       all the services currently running are shown
