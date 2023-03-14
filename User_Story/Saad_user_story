@@ -1,14 +1,56 @@
-User Story 01:	As a project manager, I want to easily view the status of my team's tasks in Odoo so that I can track progress and make necessary 					adjustments.
+User Story 01:	As a project manager, I want to easily view the status of my team's tasks in Odoo so that I can track progress and make necessary adjustments.
 
-	Equivalence Class: Current Status, Progress, Due Date
-	Boundary Value: Minimum and Maximum value of Progress
+Equivalence Class Partitioning:
+Valid status values: "To Do", "In Progress", "Done"
+Invalid status values: "To Do Today", "Blocked", "Cancelled"
 
-User Story 02:	As an HR manager, I want to easily manage employee information in Odoo so that I can maintain accurate records.
+Boundary Values:
+Minimum valid status value: "To Do"
+Maximum valid status value: "Done"
+Empty status value (no tasks assigned to the project manager)
+Large number of tasks assigned to the project manager (e.g. 100+ tasks)
+Additional boundary values based on input format:
+Status input field: maximum length, minimum length, special characters, leading/trailing spaces
+Task list display: empty list, long list (e.g. 50+ tasks), incomplete list (only showing a portion of the total number of tasks)
+
+User Story 02:	As a project manager, I want to be able to view all the tasks assigned to me and my team members, so that I can stay on top of our progress and prioritize tasks as needed.
 	
-	Equivalence Class: Valid employee information, Invalid employee information, Valid and invalid actions for managing employee information, Valid and 					 invalid search criteria
-	Boundary Value: Maximum number of employees that can be managed by Odoo, Minimum required fields to add a new employee, Maximum field length for employee 			    data, Maximum number of users who can access the system simultaneously
+Equivalence Class Partitioning:
+Valid inputs:
+A list of tasks assigned to the project manager and team members.
+Status of the task, such as "In Progress," "Completed," and "Not Started."
+Priority of the task, such as "High," "Medium," and "Low."
+Deadline of the task, such as "Today," "This Week," and "Next Week."
+Invalid inputs:
+Empty list of tasks.
+Incorrect status input, such as "In Progresss" or "Compelted."
+Invalid priority input, such as "Critical" or "Urgent."
+Invalid deadline input, such as "Yesterday" or "Next Month."
 
-User Story 03:	As a finance manager, I want to easily manage invoices and payments in Odoo so that I can ensure timely and accurate processing of 					financial transactions.
+Boundary Values:
+Minimum number of tasks: 0
+Maximum number of tasks: No specific maximum limit.
+Minimum value for priority: "Low"
+Maximum value for priority: "High"
+Minimum value for status: "Not Started"
+Maximum value for status: "Completed"
+Minimum value for deadline: Today
+Maximum value for deadline: One year from today.
+
+User Story 03:	As a project manager, I want to be able to communicate with my team members and stakeholders through the Odoo platform, so that all project-related discussions and decisions are documented and easily accessible.
 	
-	Equivalence Class: Invoice Due Date, Invoice Amount, Payment Amount, Payment Date
-	Boundary Value: Minimum and Maximum value of Invoice Amount and Payment Amount
+Equivalence Class Partitioning:
+Valid input: messages, files, documents, meetings, deadlines
+Invalid input: others
+
+Boundary Values:
+Minimum number of team members required to communicate with: 1
+Maximum number of team members that can be communicated with: no limit
+Minimum number of characters for messages: 1
+Maximum number of characters for messages: 1000
+Minimum number of files and documents that can be shared: 0
+Maximum number of files and documents that can be shared: no limit
+Minimum duration for meetings: 15 minutes
+Maximum duration for meetings: 8 hours
+Minimum lead time to schedule a meeting: 1 hour
+Maximum lead time to schedule a meeting: 2 weeks

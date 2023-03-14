@@ -1,56 +1,103 @@
-User Story 01:	As a project manager, I want to easily view the status of my team's tasks in Odoo so that I can track progress and make necessary 					adjustments.
+User Story 01:	As a project manager, I want to easily view the status of my team's tasks in Odoo so that I can track progress and make necessary adjustments.
 
 Gherkin Scenarios:
 
-Given the task list is open, 
-when the project manager selects a task, 
-then the system should display the current status and progress.
+Given I am a project manager
+And I am logged in to Odoo
+And the task list is open 
+When the project manager selects a task
+Then the system should display the current status
 
-Given the task list is open, 
-when the project manager assigns a new task to a team member, 
-then the system should update the task list accordingly.
+Given I am a project manager
+And I am logged in to Odoo
+And the task list is open 
+When the project manager assigns a new task to a team member
+Then the system should update the task list accordingly
 
-Given the task list is open, 
-when the project manager changes the due date of a task,
-then the system should adjust the status and progress accordingly.
+Given I am a project manager
+And I am logged in to Odoo
+And the task list is open 
+When the project manager changes the due date of a task
+Then the system should adjust the status and progress accordingly
 
 
-User Story 02:	As an HR manager, I want to easily manage employee information in Odoo so that I can maintain accurate records.
-
-Gherkin Scenarios:
-
-Given the employee list is open, 
-when the HR manager selects an employee, 
-then the system should display their personal and professional information.
-
-Given the employee list is open, 
-when the HR manager creates a new employee record, 
-then the system should prompt the user to enter all required information.
-
-Given the employee list is open, 
-when the HR manager updates an employee,
-then system should display the updates review page before updating the employee.
-
-User Story 03:	As a finance manager, I want to easily manage invoices and payments in Odoo so that I can ensure timely and accurate processing of 					financial transactions.
+User Story 02:	As a project manager, I want to be able to view all the tasks assigned to me and my team members, so that I can stay on top of our progress and prioritize tasks as needed.
 
 Gherkin Scenarios:
 
-Given the invoices list is open, 
-when the finance manager selects an invoice, 
-then the system should display the details of the invoice, including the due date, amount, and payment status.
+Given that the project manager is logged in to Odoo
+And they have been assigned several tasks
+When they navigate to the "Tasks" module
+Then they should see a list of all the tasks assigned to them
+And each task should display the task name, status, priority, deadline, and assigned team member
 
-Given the invoices list is open, 
-when the finance manager creates a new invoice, 
-then the system should prompt the user to enter all required information, including the customer name, due date, and amount.
+Given that the project manager is logged in to Odoo
+And they have been assigned tasks across multiple projects
+When they navigate to the "Tasks" module
+And they select a specific project from the filter dropdown
+Then they should only see the tasks assigned to them for that particular project
+And the task list should update to reflect the selected project
 
-Given the invoices list is open, 
-when the finance manager applies a payment to an invoice, 
-then the system should update the payment status of the invoice and record the payment information.
+Given that the project manager is logged in to Odoo
+And they have several tasks assigned to them
+When they select a task from the list
+And they assign the task to a team member
+Then the assigned team member should be able to see the task in their task list
+And the task should no longer appear in the project manager's task list
 
-Given the payments list is open, 
-when the finance manager selects a payment, 
-then the system should display the details of the payment, including the amount, date, and invoice number.
+Given that the project manager is logged in to Odoo
+And they have several tasks assigned to them with varying deadlines
+When they navigate to the "Tasks" module
+And they sort the task list by deadline in ascending order
+Then they should see the tasks with the earliest deadlines at the top of the list
+And they should be able to prioritize their work accordingly
 
-Given the payments list is open, 
-when the finance manager creates a new payment, 
-then the system should prompt the user to enter all required information, including the amount, date, and invoice number.
+User Story 03:	As a project manager, I want to be able to communicate with my team members and stakeholders through the Odoo platform, so that all project-related discussions and decisions are documented and easily accessible.
+
+Gherkin Scenarios:
+
+Given I am a project manager
+And I am logged in to Odoo
+And I am on the project page
+When I click on the "Discussions" tab
+And click on the "New Discussion" button
+And enter the discussion title and description
+And add team members and stakeholders to the discussion
+And click on the "Create" button
+Then a new discussion thread is created
+And all members added to the discussion receive a notification
+And the discussion is listed on the "Discussions" tab
+
+Given I am a project manager
+And I am logged in to Odoo
+And I am on the project page
+And there is an existing discussion thread
+When I click on the discussion thread
+And type my reply in the "Reply" box
+And click on the "Reply" button
+Then my reply is added to the discussion thread
+And all members added to the discussion receive a notification
+
+Given I am a project manager
+And I am logged in to Odoo
+And I am on the project page
+And there is an existing discussion thread
+When I click on the discussion thread
+And click on the "Attach" button
+And select a file to upload
+And click on the "Upload" button
+Then the file is attached to the discussion thread
+And all members added to the discussion receive a notification
+
+Given I am a project manager
+And I am logged in to Odoo
+And I am on the project page
+When I click on the "Meetings" tab
+And click on the "New Meeting" button
+And enter the meeting title and description
+And select team members and stakeholders to invite
+And select a date and time for the meeting
+And click on the "Create" button
+Then a new meeting is scheduled
+And all members invited to the meeting receive a notification
+And the meeting is listed on the "Meetings" tab
