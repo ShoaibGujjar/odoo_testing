@@ -1,63 +1,49 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import time
 
-# Initialize the driver
+# Launch the browser and navigate to Odoo login page
 driver = webdriver.Chrome()
-
-# Navigate to the Odoo login page
 driver.get("http://localhost:8069/web/login")
 
-# Log in to Odoo
+# Log in as a project manager
 email = driver.find_element_by_name("login")
-password = driver.find_element_by_name("password")
 email.send_keys("12345678@abc.com")
+password = driver.find_element_by_name("password")
 password.send_keys("12345678")
-driver.find_element_by_css_selector("button[type='submit']").click()
+password.send_keys(Keys.RETURN)
 
-# Wait for the page to load
+# Wait for the dashboard to load and navigate to the project page
+time.sleep(5)
+project_button = driver.find_element_by_xpath("//a[@href='/web#menu_id=235&action=']")
+project_button.click()
+
+# Wait for the project page to load and find an existing discussion thread
+time.sleep(5)
+discussion_thread = driver.find_element_by_class_name("o_thread_message_content")
+
+# Click on the discussion thread and find the "Attach" button
+discussion_thread.click()
+attach_button = driver.find_element_by_class_name("o_attach_document")
+
+# Click on the "Attach" button and select a file to upload
+attach_button.click()
+time.sleep(2)
+file_input = driver.find_element_by_xpath("//input[@type='file']")
+file_input.send_keys("/path/to/your/file")
+
+# Click on the "Upload" button to attach the file
+upload_button = driver.find_element_by_class_name("o_attach_upload")
+upload_button.click()
 time.sleep(5)
 
-# Navigate to the project page
-driver.get("http://localhost:8069/web#menu_id=115&action=376")
-
-# Wait for the page to load
-time.sleep(5)
-
-# Click on the "Discussions" tab
-driver.find_element_by_xpath("//span[text()='Discussions']").click()
-
-# Wait for the page to load
-time.sleep(5)
-
-# Click on the "New Discussion" button
-driver.find_element_by_xpath("//button[text()='New Discussion']").click()
-
-# Wait for the page to load
-time.sleep(5)
-
-# Enter the discussion title and description
-title = driver.find_element_by_name("name")
-title.send_keys("Discussion Title")
-description = driver.find_element_by_name("description")
-description.send_keys("Discussion Description")
-
-# Add team members and stakeholders to the discussion
-driver.find_element_by_xpath("//span[text()='Add a member']").click()
-driver.find_element_by_xpath("//label[text()='John Smith']").click()
-driver.find_element_by_xpath("//span[text()='Add']").click()
-
-# Click on the "Create" button
-driver.find_element_by_xpath("//button[text()='Create']").click()
-
-# Wait for the discussion to be created
-time.sleep(5)
-
-# Verify that a new discussion thread is created
-assert driver.find_element_by_xpath("//h4[text()='Discussion Title']")
+# Verify that the file is attached to the discussion thread
+attachment = driver.find_element_by_class_name("o_attachment_preview")
+assert attachment.is_displayed()
 
 # Verify that all members added to the discussion receive a notification
-notification_count = driver.find_element_by_xpath("//span[contains(@class, 'o_notification_counter')]")
-assert notification_count.text == "1"
+notification = driver.find_element_by_class_name("o_mail_notification")
+assert notification.is_displayed()
 
-# Verify that the discussion is listed on the "Discussions" tab
-assert driver.find_element_by_xpath("//div[contains(@class, 'o_mail_discussions')]/div[contains(text(), 'Discussion Title')]")
+# Close the browser
+driver.close()
