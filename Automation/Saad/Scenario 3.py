@@ -4,8 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
 
-# Set up the Chrome driver
-driver = webdriver.Chrome()
+# Set up the Edge driver
+driver = webdriver.Edge()
 
 try:
     # Navigate to the Odoo login page

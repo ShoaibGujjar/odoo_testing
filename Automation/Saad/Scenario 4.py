@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 # Launch the browser and navigate to Odoo login page
-driver = webdriver.Chrome()
+driver = webdriver.Edge()
 driver.get("http://localhost:8069/web/login")
 
 # Log in as a project manager

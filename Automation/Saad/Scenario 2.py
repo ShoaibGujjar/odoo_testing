@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
 
 # Set up the Chrome driver
-driver = webdriver.Chrome()
+driver = webdriver.Edge()
 
 # Navigate to the Odoo login page and log in
 driver.get("http://localhost:8069/")
