@@ -1,7 +1,19 @@
-# odoo_testing
+# README.md
 
-> testing odoo software in unit_testing api_testing
-### A top-level directory layout
+## Odoo Testing
+
+This repository contains various types of testing done on Odoo. The aim of these tests is to ensure that the Odoo modules are functioning as expected and to identify any issues or bugs that need to be addressed. The tests include:
+
+- API testing using Python Requests library
+- Automated user story testing using Selenium WebDriver and Gherkin scenarios
+- User stories for testing different parts of Odoo
+- Gherkin scenarios of user stories
+- Static Application Security Testing (SAST) using Bandit
+- Performance testing using Locust
+- Code quality testing using pylint, flake8, and bandit
+
+## A top-level directory layout
+
 ```ruby
 odoo_testing
 ├── apiTestCase
@@ -30,12 +42,43 @@ odoo_testing
 ```
 
 
+## Getting Started
 
+Before running the tests, the following steps need to be taken:
 
+- Install the required Python libraries by running `pip install -r requirements.txt`
+- Set up the Odoo server and install the necessary modules
+- Configure the baseURL, userName, password, etc. in the Configuration.py file
 
+## Running the Tests
 
+### API Testing
+
+To run the API tests, navigate to the `apiTestCase` directory and run the `test_api.py` file.
+
+### Automated User Story Testing
+
+To run the automated user story tests, navigate to the `Automation` directory and run the `test_automation.py` file.
+
+### User Stories and Gherkin Scenarios
+
+The user stories and Gherkin scenarios can be found in the `userstory` and `gherkin scenarios` directories, respectively.
+
+### SAST
+
+To run the SAST, navigate to the `SAST` directory and run the `run_bandit_sast.py` file.
+
+### Performance Testing
+
+To run the performance tests, navigate to the `Performance Testing` directory and run the `test_performance.py` file.
+
+### Code Quality
+
+To run the code quality tests, navigate to the `Code quality` directory and run the `run_code_quality_analysis.py` file.
 
 ## Contributing
 
+Contributions to this repository are welcome. If you find any issues or have suggestions for improvement, please create a pull request.
 
 ## License
+None
