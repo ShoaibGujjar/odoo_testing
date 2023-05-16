@@ -5,10 +5,8 @@ from selenium.webdriver.common.by import By
 import time
 from configuration import baseUrl,userName,password,saleAppUrl
 
-
 driver = webdriver.Firefox() # initialize the Chrome driver
 driver.get(baseUrl) # navigate to your Odoo login page
-
 
 driver = driver
 time.sleep(2)

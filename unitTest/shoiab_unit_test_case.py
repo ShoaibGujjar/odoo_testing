@@ -30,6 +30,8 @@ class TestCreateSalesOrder(unittest.TestCase):
     self.assertEqual(sales_order.quantity, expected_result["quantity"])
     self.assertEqual(sales_order.price, expected_result["price"])
 
+if __name__ == "__main__":
+  unittest.main()
 
 class TestDeleteSalesOrder(unittest.TestCase):
 

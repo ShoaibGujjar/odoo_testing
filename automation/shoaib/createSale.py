@@ -4,11 +4,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
-
-
 driver = webdriver.Firefox() # initialize the Chrome driver
 driver.get("http://localhost:8069/") # navigate to your Odoo login page
-
 
 driver = driver
 # find the email input field and enter your email address
@@ -18,8 +15,6 @@ sign.click()
 email = driver.find_element("id","login").send_keys("shoaibgujjar948@gmail.com")
 password = driver.find_element("id","password").send_keys("shoaib5115")
 login = driver.find_element("xpath","//button[text()='Log in']").click()
-
-# assert "Odoo" in driver.title
 
 # navigate to the Sales app
 driver.get("http://localhost:8069/web#action=296&model=sale.order&view_type=list&cids=1&menu_id=178")
@@ -54,7 +49,6 @@ assert "Sales Order" in driver.title
 assert "ACME Corporation" in driver.page_source
 assert "Product Name" in driver.page_source
 assert "10.00" in driver.page_source
-
 
 driver.close() # close the Chrome driver
 
