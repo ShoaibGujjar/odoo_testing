@@ -1,8 +1,7 @@
 # odoo_testing
 
 > testing odoo software in unit_testing api_testing
-### A typical top-level directory layout
-
+### A top-level directory layout
 ```ruby
 odoo_testing
 ├── apiTestCase
