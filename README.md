@@ -1,5 +1,7 @@
 # odoo_testing
-### folder structure
+
+> Folder structure options and naming conventions for software projects
+### A typical top-level directory layout
 odoo_testing
 ├── apiTestCase
 │   ├── test_create_sales_order.py        # test case that create new sales in sales app using api
