@@ -1,0 +1,7 @@
+selenium
+odoo
+pylint
+unittest
+flake8
+bandit
+requests

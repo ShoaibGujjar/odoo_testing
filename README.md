@@ -54,11 +54,11 @@ Before running the tests, the following steps need to be taken:
 
 ### API Testing
 
-To run the API tests, navigate to the `apiTestCase` directory and run the `test_api.py` file.
+To run the API tests, navigate to the `apiTestCase` directory and run the `saad_project_manager_api_test.py`, `shoaib_api_test_case.py` file.
 
 ### Automated User Story Testing
 
-To run the automated user story tests, navigate to the `Automation` directory and run the `test_automation.py` file.
+To run the automated user story tests, navigate to the `Automation` directory and run the available files in directories.
 
 ### User Stories and Gherkin Scenarios
 
@@ -66,15 +66,15 @@ The user stories and Gherkin scenarios can be found in the `userstory` and `gher
 
 ### SAST
 
-To run the SAST, navigate to the `SAST` directory and run the `run_bandit_sast.py` file.
+To run the SAST, navigate to the `SAST` directory and run the `saad_sast.py` file.
 
 ### Performance Testing
 
-To run the performance tests, navigate to the `Performance Testing` directory and run the `test_performance.py` file.
+To run the performance tests, navigate to the `Performance Testing` directory and run the `saad_performance_test.py` file.
 
 ### Code Quality
 
-To run the code quality tests, navigate to the `Code quality` directory and run the `run_code_quality_analysis.py` file.
+To run the code quality tests, navigate to the `Code quality` directory and run the `saad_quality_analysis.py` file.
 
 ## Contributing
 
