@@ -2,11 +2,12 @@
 
 > Folder structure options and naming conventions for software projects
 ### A typical top-level directory layout
-odoo_testing
-├── apiTestCase
-│   ├── test_create_sales_order.py        # test case that create new sales in sales app using api
-│   ├── test_delete_sales_order.py        # test case that delete sales in sales app passing sale id
-│   └── test_update_sales_order.py        # test case that update sales passing sale_id in params 
+
+*odoo_testing
+*├── apiTestCase
+*│   ├── test_create_sales_order.py        # test case that create new sales in sales app using api
+*│   ├── test_delete_sales_order.py        # test case that delete sales in sales app passing sale id
+*│   └── test_update_sales_order.py        # test case that update sales passing sale_id in params 
 ├── automation 
 │   ├── contactUs.py                      # fill form and submit content form
 │   ├── searchSales.py                    # search all sales that have "azure" in there name
