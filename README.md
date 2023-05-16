@@ -1,6 +1,6 @@
 # odoo_testing
 
-> Folder structure options and naming conventions for software projects
+> testing odoo software in unit_testing api_testing
 ### A typical top-level directory layout
 
 ```ruby
