@@ -1,6 +1,6 @@
 import requests
 import unittest
-
+from configuration import saleOrder
 
 def test_create_sales_order(self):
   """Test that the create_sales_order function creates a new sales order correctly."""
@@ -15,7 +15,7 @@ def test_create_sales_order(self):
 
   # Make a request to the Odoo API to create a new sales order.
   response = requests.post(
-    "http://localhost:8069/api/v1/sale_orders",
+    saleOrder,
     json={
       "name": "Test Sales Order",
       "customer_id": 1,
@@ -38,7 +38,7 @@ def test_delete_sales_order(self):
   """Test that the delete_sales_order function deletes a sales order correctly."""
   # Create a new sales order in Odoo.
   response = requests.post(
-    "http://localhost:8069/api/v1/sale_orders",
+    saleOrder,
     json={
       "name": "Test Sales Order",
       "customer_id": 1,
@@ -56,7 +56,7 @@ def test_delete_sales_order(self):
 
   # Delete the sales order.
   response = requests.delete(
-    f"http://localhost:8069/api/v1/sale_orders/{sales_order_id}"
+    f'{saleOrder}/{sales_order_id}'
   )
 
   # Assert that the response is successful.
@@ -64,7 +64,7 @@ def test_delete_sales_order(self):
 
   # Assert that the sales order was deleted successfully.
   with self.assertRaises(Exception):
-    response = requests.get(f"http://localhost:8069/api/v1/sale_orders/{sales_order_id}")
+    response = requests.get(f"{saleOrder}/{sales_order_id}")
 
 
 
@@ -72,7 +72,7 @@ def test_update_sales_order(self):
   """Test that the update_sales_order function updates a sales order correctly."""
   # Create a new sales order in Odoo.
   response = requests.post(
-    "http://localhost:8069/api/v1/sale_orders",
+    saleOrder,
     json={
       "name": "Test Sales Order",
       "customer_id": 1,
@@ -90,7 +90,7 @@ def test_update_sales_order(self):
 
   # Update the sales order.
   response = requests.put(
-    f"http://localhost:8069/api/v1/sale_orders/{sales_order_id}",
+    f"{saleOrder}/{sales_order_id}",
     json={
       "name": "Updated Test Sales Order",
       "customer_id": 2,
@@ -104,7 +104,7 @@ def test_update_sales_order(self):
   self.assertEqual(response.status_code, 200)
 
   # Get the updated sales order.
-  updated_sales_order = requests.get(f"http://localhost:8069/api/v1/sale_orders/{sales_order_id}").json()
+  updated_sales_order = requests.get(f"{saleOrder}/{sales_order_id}").json()
 
   # Assert that the sales order was updated successfully.
   self.assertEqual(updated_sales_order["name"], "Updated Test Sales Order")

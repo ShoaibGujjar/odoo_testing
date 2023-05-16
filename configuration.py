@@ -1,0 +1,5 @@
+baseUrl="http://localhost:8069/"
+userName="shoaibgujjar948@gmail.com"
+password="shoaib5115"
+saleAppUrl="http://localhost:8069/web#action=296&model=sale.order&view_type=list&cids=1&menu_id=178"
+saleOrder="http://localhost:8069/api/v1/sale_orders"
