@@ -3,6 +3,7 @@
 > Folder structure options and naming conventions for software projects
 ### A typical top-level directory layout
 
+```ruby
 *[odoo_testing]
 *[├── apiTestCase]
 *│   ├── test_create_sales_order.py        # test case that create new sales in sales app using api
@@ -27,7 +28,7 @@
 ├── configuration.py                      # add all configurations credentials URl pthh 
 ├── README.md                             # odoo_testin detail
 └── env                                   # environments that run project and install all dependencies in that environments
-
+```
 
 
 
